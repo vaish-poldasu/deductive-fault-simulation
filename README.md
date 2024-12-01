@@ -37,5 +37,9 @@ python ded_fault_simulation.py <verilog_file> <wrapper_name> <test_count> <test_
 - **<verilog_file>**: The path to the Verilog file (e.g., c17.v). This file contains the digital circuit that you want to simulate for faults.
 - **<wrapper_name>**: The name of the wrapper module in the Verilog file. This is the top-level module where the fault simulation starts.
 - **<test_count>**: The number of test vectors to be applied (e.g., 3 if you are using 3 test vectors). This indicates how many distinct sets of input values will be tested in the simulation.
-- **<test_vectors>**: The test vectors to be used for the fault simulation (e.g., 101, 110, 111). These are the binary input patterns that will be applied to the circuit.
+- **<test_vectors>**: The test vectors to be used for the fault simulation (e.g., 00000, 11111). These are the binary input patterns that will be applied to the circuit.
 - **<output_json_file>**: The name of the output JSON file where the results of the fault simulation will be saved (e.g., output_c17.json). This file contains the results of the fault detection process.
+### Example command
+```bash
+python main.py c17.v c17 2 00000 11111 output_c17.json
+```
