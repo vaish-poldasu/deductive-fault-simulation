@@ -23,6 +23,7 @@ You can install the required Python library using `pip`:
 
 ```bash
 pip install pyverilog
+```
 
 ## Running the Code
 
@@ -32,6 +33,7 @@ To execute the deductive fault simulation, use the following command format:
 
 ```bash
 python ded_fault_simulation.py <verilog_file> <wrapper_name> <test_count> <test_vectors> <output_json_file>
+```
 - **<verilog_file>**: The path to the Verilog file (e.g., c17.v). This file contains the digital circuit that you want to simulate for faults.
 - **<wrapper_name>**: The name of the wrapper module in the Verilog file. This is the top-level module where the fault simulation starts.
 - **<test_count>**: The number of test vectors to be applied (e.g., 3 if you are using 3 test vectors). This indicates how many distinct sets of input values will be tested in the simulation.
