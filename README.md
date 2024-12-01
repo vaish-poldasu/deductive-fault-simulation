@@ -43,3 +43,17 @@ python ded_fault_simulation.py <verilog_file> <wrapper_name> <test_count> <test_
 ```bash
 python main.py c17.v c17 2 00000 11111 output_c17.json
 ```
+
+###Verification of the outputs
+- Simulate the verilog circuit using its corresponding testbench circuit and record the fault-free output for all primary outputs.This serves as the reference for comparison when evaluating faults.
+- For each potential fault detected through deductive fault simulation ,determined if the fault causes a primary output mismatch,if yes then the fault is detected.It is done using command
+```bash
+iverilog -o <output_name> <testbench_name>
+vvp <output_name>
+```
+###Example command
+```bash
+iverilog -o c432.vvp c432_tb
+vvp c432.vvp
+```
+
